@@ -47,6 +47,10 @@ ext {
 
     /* Android core */
     supportLibraryVersion = '27.1.1'
+    constraintLayoutVersion = '1.1.2'
+
+    /* kotlin/java utils */
+    daggerVersion = '2.14.1'
 
     /* testing */
     junitVersion = '4.12'
