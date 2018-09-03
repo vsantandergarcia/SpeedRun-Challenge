@@ -1,0 +1,59 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlinVersion = '1.2.30'
+    ext.gradleVersion = '3.1.2'
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+def releaseCandidate = 0
+
+ext {
+    /* app */
+    if (releaseCandidate != 0) {
+        appVersionName = "${versionMajor}.${versionMinor}.${versionPatch}.rc${releaseCandidate}"
+    } else {
+        appVersionName = "${versionMajor}.${versionMinor}.${versionPatch}"
+    }
+    appVersionCode = versionMajor * 10000 + versionMinor * 100 + versionPatch
+    appName = "SpeedRun"
+    applicationId = "com.vsantander.speedrun"
+
+    minSdkVersion = 19
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.0'
+
+    /* Android core */
+    supportLibraryVersion = '27.1.1'
+
+    /* testing */
+    junitVersion = '4.12'
+    androidRunnerVersion = '1.0.2'
+    espressoCoreVersion = '3.0.2'
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
