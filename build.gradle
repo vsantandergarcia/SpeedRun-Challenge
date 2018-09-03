@@ -49,8 +49,16 @@ ext {
     supportLibraryVersion = '27.1.1'
     constraintLayoutVersion = '1.1.2'
 
+    /* android architecture components */
+    archLifecycleVersion = '1.1.1'
+
     /* kotlin/java utils */
     daggerVersion = '2.14.1'
+    rxKotlinVersion = '2.1.0'
+    rxAndroidVersion = '2.0.2'
+    ankoVersion = '0.10.4'
+    retrofitVersion = '2.3.0'
+    okhttp3LoggingInterceptor = '3.8.0'
 
     /* testing */
     junitVersion = '4.12'

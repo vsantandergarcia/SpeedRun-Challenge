@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.os.Handler
 import com.vsantander.speedrun.R
 import com.vsantander.speedrun.ui.base.activity.BaseActivity
+import com.vsantander.speedrun.ui.gameslist.GamesListActivity
+import org.jetbrains.anko.startActivity
 import java.util.concurrent.TimeUnit
 
 @BaseActivity.Animation(BaseActivity.FADE)
@@ -17,7 +19,8 @@ class SplashActivity : BaseActivity() {
 
     private val runnable: Runnable = Runnable {
         if (!isFinishing) {
-            //TODO route next activity
+            startActivity<GamesListActivity>()
+            finish()
         }
     }
 
