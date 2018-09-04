@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">@color/sushi</color>
+    <color name="colorPrimaryDark">@color/greenHaze</color>
+    <color name="colorAccent">@color/cerulean</color>
 
+    <color name="cerulean">#00ADEF</color>
+    <color name="fountainBlue">#60C3AB</color>
+    <color name="greenHaze">#00A550</color>
+    <color name="sushi">#8CC63E</color>
     <color name="alto">#D6D6D6</color>
+
+    <!-- nomenclature -->
+    <!--
+        color_name_1 = 95% opacity  - code: F2
+        color_name_2 = 90% opacity - code: E6
+        color_name_3 = 85% opacity - code: D9
+        color_name_4 = 80% opacity - code: CC
+        color_name_5 = 75% opacity - code: BF
+        color_name_6 = 70% opacity - code: B3
+        color_name_7 = 65% opacity - code: A6
+        color_name_8 = 60% opacity - code: 99
+        color_name_9 = 55% opacity - code: 8C
+        color_name_10 = 50% opacity - code: 80
+        color_name_11 = 45% opacity - code: 73
+        color_name_12 = 40% opacity - code: 66
+        color_name_13 = 35% opacity - code: 59
+        color_name_14 = 30% opacity - code: 4d
+        color_name_15 = 25% opacity - code: 40
+        color_name_16 = 20% opacity - code: 33
+        color_name_17 = 15% opacity - code: 26
+        color_name_18 = 10% opacity - code: 1A
+        color_name_19 = 5%  opacity - code: 0D
+      -->
+    <color name="semi_transparent_sushi">#CC8CC63E</color>
 </resources>
