@@ -49,6 +49,9 @@ ext {
     supportLibraryVersion = '27.1.1'
     constraintLayoutVersion = '1.1.2'
 
+    /* android view utils */
+    glideVersion = '4.3.0'
+
     /* android architecture components */
     archLifecycleVersion = '1.1.1'
 
@@ -59,6 +62,7 @@ ext {
     ankoVersion = '0.10.4'
     retrofitVersion = '2.3.0'
     okhttp3LoggingInterceptor = '3.8.0'
+    ktxVersion = '0.3'
 
     /* testing */
     junitVersion = '4.12'

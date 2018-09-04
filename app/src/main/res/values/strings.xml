@@ -1,8 +1,12 @@
 <resources>
     <!-- Common -->
     <string name="app_name">SpeedRun</string>
+    <string name="common_error">Oooops… Something went wrong</string>
 
     <!-- Splash -->
     <string name="splash_icon">SplashIcon</string>
+
+    <!-- Game list -->
+    <string name="item_game_img">ItemGameImage</string>
 
 </resources>
