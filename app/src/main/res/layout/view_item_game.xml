@@ -30,6 +30,7 @@
             android:gravity="center"
             android:maxLines="1"
             android:padding="@dimen/activity_horizontal_margin"
+            android:textAppearance="@style/TextBrandonGrotesqueBold16.Black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@+id/gameImageView"
             app:layout_constraintRight_toRightOf="@+id/gameImageView"

@@ -10,7 +10,8 @@ class GameTOMapper @Inject constructor() {
         return Game(
                 id = value.id,
                 title = value.names.international,
-                image = value.assets.coverLarge.uri)
+                image = value.assets.coverLarge.uri,
+                logo = value.assets.logo.uri)
     }
 
     fun toEntity(values: List<GameTO>): List<Game> = values.map { toEntity(it) }

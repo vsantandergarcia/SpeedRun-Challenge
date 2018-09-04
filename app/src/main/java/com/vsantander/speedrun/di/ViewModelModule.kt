@@ -3,6 +3,7 @@ package com.vsantander.speedrun.di
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import com.vsantander.speedrun.ui.base.viewmodel.ViewModelFactory
+import com.vsantander.speedrun.ui.gamedetail.GameDetailViewModel
 import com.vsantander.speedrun.ui.gameslist.GamesListViewModel
 import dagger.Binds
 import dagger.Module
@@ -17,5 +18,10 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(GamesListViewModel::class)
-    abstract fun bindProductListViewModel(viewModel: GamesListViewModel): ViewModel
+    abstract fun bindGamesListViewModel(viewModel: GamesListViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(GameDetailViewModel::class)
+    abstract fun bindGameDetailViewModel(viewModel: GameDetailViewModel): ViewModel
 }

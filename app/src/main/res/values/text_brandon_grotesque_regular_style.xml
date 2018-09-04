@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Brandon Grotesque Regular-->
+    <style name="TextBrandonGrotesqueRegular">
+        <item name="android:fontFamily">@font/brandongrotesque_regular</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueRegular12" parent="TextBrandonGrotesqueRegular">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueRegular12.Black" parent="TextBrandonGrotesqueRegular12">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueRegular14" parent="TextBrandonGrotesqueRegular">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueRegular14.Black" parent="TextBrandonGrotesqueRegular14">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextBrandonGrotesqueRegular14.White" parent="TextBrandonGrotesqueRegular14">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

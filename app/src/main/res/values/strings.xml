@@ -9,4 +9,12 @@
     <!-- Game list -->
     <string name="item_game_img">ItemGameImage</string>
 
+    <!-- Game Detail -->
+    <string name="game_detail_img">gameDetailImg</string>
+    <string name="game_detail_player_name">Player name</string>
+    <string name="game_detail_run_time">Run time</string>
+    <string name="game_detail_icon_img">GameDetailIcon</string>
+    <string name="game_detail_video_img">VideoIcon</string>
+    <string name="game_detail_no_info">-</string>
+
 </resources>

@@ -7,8 +7,8 @@ data class NameTO(
         val international: String,
 
         @SerializedName("japanese")
-        val japanese: String,
+        val japanese: String?,
 
         @SerializedName("twitch")
-        val twitch: String
+        val twitch: String?
 )

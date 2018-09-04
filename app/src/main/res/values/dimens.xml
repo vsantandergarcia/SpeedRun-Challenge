@@ -3,9 +3,25 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- Common -->
+    <dimen name="margin5">5dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+
+    <!--Text size dimens-->
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+
     <!-- Game List -->
     <dimen name="game_item_radius">20dp</dimen>
     <dimen name="game_item_img_height">150dp</dimen>
     <dimen name="game_item_elevation">0dp</dimen>
+
+    <!-- Game detail -->
+    <dimen name="game_detail_expanded_title_margin_end">64dp</dimen>
+    <dimen name="game_detail_expanded_title_margin_start">48dp</dimen>
+    <dimen name="game_detail_img_min_height">300dp</dimen>
+    <dimen name="game_detail_logo_size">65dp</dimen>
 
 </resources>

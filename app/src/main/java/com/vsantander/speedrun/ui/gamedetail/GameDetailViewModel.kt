@@ -1,11 +1,10 @@
-package com.vsantander.speedrun.ui.gameslist
+package com.vsantander.speedrun.ui.gamedetail
 
 import android.arch.lifecycle.MutableLiveData
-import com.vsantander.speedrun.data.repository.GameRepository
-import com.vsantander.speedrun.data.repository.GameRepositoryImpl
-import com.vsantander.speedrun.domain.model.Game
+import com.vsantander.speedrun.data.repository.RunRepositoryImpl
 import com.vsantander.speedrun.domain.model.Resource
-import com.vsantander.speedrun.domain.usecases.GetListGames
+import com.vsantander.speedrun.domain.model.Run
+import com.vsantander.speedrun.domain.usecases.GetFirstRun
 import com.vsantander.speedrun.extension.logd
 import com.vsantander.speedrun.extension.loge
 import com.vsantander.speedrun.ui.base.viewmodel.BaseViewModel
@@ -15,15 +14,15 @@ import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class GamesListViewModel @Inject constructor(
-        private val gameListGames: GetListGames
+class GameDetailViewModel @Inject constructor(
+        private val getFirstRun: GetFirstRun
 ) : BaseViewModel() {
 
-    val resource = MutableLiveData<Resource<List<Game>>>()
+    val resource = MutableLiveData<Resource<Run>>()
 
-    fun loadGamesList() {
+    fun loadFirstRunFromGameId(gameId: String) {
         resource.value = Resource.loading()
-        disposables += gameListGames.buildUseCase()
+        disposables += getFirstRun.buildUseCase(gameId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(
@@ -37,5 +36,4 @@ class GamesListViewModel @Inject constructor(
                         }
                 )
     }
-
 }

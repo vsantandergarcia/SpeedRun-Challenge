@@ -11,8 +11,10 @@ import com.vsantander.speedrun.domain.model.Status
 import com.vsantander.speedrun.extension.logd
 import com.vsantander.speedrun.extension.observe
 import com.vsantander.speedrun.ui.base.activity.BaseActivity
+import com.vsantander.speedrun.ui.gamedetail.GameDetailActivity
 import com.vsantander.speedrun.ui.gameslist.adapter.GamesListAdapter
 import kotlinx.android.synthetic.main.activity_games_list.*
+import org.jetbrains.anko.startActivity
 import javax.inject.Inject
 
 @BaseActivity.Animation(BaseActivity.FADE)
@@ -44,6 +46,7 @@ class GamesListActivity : BaseActivity() {
         adapter = GamesListAdapter().apply {
             onClickAction = {
                 logd("item game click with id:${it}")
+                startActivity<GameDetailActivity>(Pair(GameDetailActivity.EXTRA_GAME, it))
             }
         }
 

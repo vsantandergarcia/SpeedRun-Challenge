@@ -4,9 +4,10 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Game(
+data class Run(
         val id: String,
-        val title: String,
-        val image: String,
-        val logo: String
+        var name: String?,
+        val time: String,
+        val video: String?,
+        val firstPlayerId: String
 ) : Parcelable

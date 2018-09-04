@@ -9,7 +9,7 @@ import com.vsantander.speedrun.ui.gameslist.item.GameItemView
 
 class GamesListAdapter : RecyclerViewAdapterBase<Game, ItemView<Game>>() {
 
-    var onClickAction: ((item: String) -> Unit)? = null
+    var onClickAction: ((item: Game) -> Unit)? = null
 
     override fun onCreateItemView(parent: ViewGroup, viewType: Int): ItemView<Game> {
         return GameItemView(parent.context)
@@ -26,7 +26,7 @@ class GamesListAdapter : RecyclerViewAdapterBase<Game, ItemView<Game>>() {
             bind(game)
         }
 
-        holder.view.setOnClickListener { onClickAction?.invoke(items[position].id) }
+        holder.view.setOnClickListener { onClickAction?.invoke(items[position]) }
     }
 
 }
