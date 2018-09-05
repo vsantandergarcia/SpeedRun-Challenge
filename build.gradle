@@ -68,6 +68,7 @@ ext {
     junitVersion = '4.12'
     androidRunnerVersion = '1.0.2'
     espressoCoreVersion = '3.0.2'
+    mockitoVersion = '2.13.0'
 }
 
 task clean(type: Delete) {

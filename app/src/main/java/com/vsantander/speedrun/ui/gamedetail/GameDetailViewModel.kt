@@ -27,11 +27,11 @@ class GameDetailViewModel @Inject constructor(
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(
                         onSuccess = {
-                            logd("loadGamesList.onSuccess")
+                            logd("loadFirstRunFromGameId.onSuccess")
                             resource.value = Resource.success(it)
                         },
                         onError = {
-                            loge("loadGamesList.onError", it)
+                            loge("loadFirstRunFromGameId.onError", it)
                             resource.value = Resource.error(it)
                         }
                 )
