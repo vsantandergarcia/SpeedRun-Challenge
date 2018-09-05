@@ -1,6 +1,7 @@
 package com.vsantander.speedrun.di
 
 import com.vsantander.speedrun.data.remote.SpeedRunWebService
+import com.vsantander.speedrun.data.repository.utils.CacheTimer
 import com.vsantander.speedrun.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -31,5 +32,11 @@ class AppModule {
                 .client(clientBuilder.build())
                 .build()
                 .create<SpeedRunWebService>(SpeedRunWebService::class.java)
+    }
+
+    @Provides
+    fun provideCacheTimer(): CacheTimer {
+        return CacheTimer(true,
+                Constants.TIMEOUT_CACHE_REPOSITORY.toLong(), TimeUnit.MINUTES)
     }
 }

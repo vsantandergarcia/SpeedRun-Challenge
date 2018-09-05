@@ -11,4 +11,9 @@ interface RunRepository {
      * @return Run list from gameId.
      */
     fun getListRunsFromGameId(gameId: String): Single<List<Run>>
+
+    /**
+     * Mark cache as invalid
+     */
+    fun invalidateCache()
 }

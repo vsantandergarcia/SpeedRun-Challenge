@@ -50,7 +50,7 @@ class GamesListActivity : BaseActivity() {
             }
         }
 
-        swipeRefreshLayout.setOnRefreshListener { viewModel.loadGamesList() }
+        swipeRefreshLayout.setOnRefreshListener { viewModel.loadGamesList(true) }
         recyclerView.apply {
             layoutManager = GridLayoutManager(context,
                     LIST_SPAN_COUNT)

@@ -11,4 +11,9 @@ interface GameRepository {
      * @return a List of the Games available.
      */
     fun getListGames(): Single<List<Game>>
+
+    /**
+     * Mark cache as invalid
+     */
+    fun invalidateCache()
 }

@@ -21,9 +21,9 @@ class GamesListViewModel @Inject constructor(
 
     val resource = MutableLiveData<Resource<List<Game>>>()
 
-    fun loadGamesList() {
+    fun loadGamesList(forceFromRemoteSource: Boolean = false) {
         resource.value = Resource.loading()
-        disposables += gameListGames.buildUseCase()
+        disposables += gameListGames.buildUseCase(forceFromRemoteSource)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(

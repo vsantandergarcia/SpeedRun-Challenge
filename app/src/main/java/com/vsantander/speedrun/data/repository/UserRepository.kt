@@ -12,4 +12,8 @@ interface UserRepository {
      */
     fun getUserFromGameId(gameId: String): Single<User>
 
+    /**
+     * Mark cache as invalid
+     */
+    fun invalidateCache()
 }
