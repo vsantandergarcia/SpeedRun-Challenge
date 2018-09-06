@@ -24,7 +24,7 @@ import kotlinx.android.synthetic.main.activity_game_detail_content.*
 import javax.inject.Inject
 
 @BaseActivity.Animation(BaseActivity.PUSH)
-class GameDetailActivity : BaseActivity(), AppBarLayout.OnOffsetChangedListener  {
+class GameDetailActivity : BaseActivity(), AppBarLayout.OnOffsetChangedListener {
 
     companion object {
         const val EXTRA_GAME = "EXTRA_GAME"
@@ -34,7 +34,6 @@ class GameDetailActivity : BaseActivity(), AppBarLayout.OnOffsetChangedListener 
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private lateinit var viewModel: GameDetailViewModel
-
     private lateinit var game: Game
 
     /* Activity methods */

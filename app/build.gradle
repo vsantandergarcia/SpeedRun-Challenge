@@ -64,14 +64,16 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttp3LoggingInterceptor"
     implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
 
-    /* testing */
+    /* unit testing */
     testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation "com.android.support.test:runner:$rootProject.androidRunnerVersion"
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoCoreVersion"
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
     testImplementation "org.mockito:mockito-inline:$mockitoVersion"
     testImplementation "android.arch.core:core-testing:$archLifecycleVersion"
     testImplementation "com.squareup.okhttp3:mockwebserver:$rootProject.mockwebServerVersion"
+
+    /* ui testing */
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoCoreVersion"
     androidTestImplementation ("com.android.support.test:rules:$rootProject.espressoTestRules"){
         exclude module: 'support-annotations'
     }

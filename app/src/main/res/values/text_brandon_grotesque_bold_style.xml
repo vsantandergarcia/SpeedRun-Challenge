@@ -9,10 +9,6 @@
         <item name="android:textSize">@dimen/text_size_12</item>
     </style>
 
-    <style name="TextBrandonGrotesqueBold12.Black" parent="TextBrandonGrotesqueBold12">
-        <item name="android:textColor">@android:color/black</item>
-    </style>
-
     <style name="TextBrandonGrotesqueBold14" parent="TextBrandonGrotesqueBold">
         <item name="android:textSize">@dimen/text_size_14</item>
     </style>
@@ -35,10 +31,6 @@
 
     <style name="TextBrandonGrotesqueBold20" parent="TextBrandonGrotesqueBold">
         <item name="android:textSize">@dimen/text_size_20</item>
-    </style>
-
-    <style name="TextBrandonGrotesqueBold20.Black" parent="TextBrandonGrotesqueBold20">
-        <item name="android:textColor">@android:color/black</item>
     </style>
 
     <style name="TextBrandonGrotesqueBold20.White" parent="TextBrandonGrotesqueBold20">

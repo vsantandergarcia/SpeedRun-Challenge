@@ -50,8 +50,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/margin5"
-                android:textAppearance="@style/TextBrandonGrotesqueRegular14.Black"
                 android:text="@string/game_detail_no_info"
+                android:textAppearance="@style/TextBrandonGrotesqueRegular14.Black"
                 app:layout_constraintBottom_toBottomOf="@+id/playerNameTextView"
                 app:layout_constraintLeft_toRightOf="@+id/playerNameTextView"
                 app:layout_constraintTop_toTopOf="@+id/playerNameTextView"
@@ -87,13 +87,14 @@
         android:id="@+id/videoLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_gravity="center"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:background="@android:color/transparent"
         android:contentDescription="@string/game_detail_video_img"
-        android:src="@drawable/youtube" />
+        android:src="@drawable/youtube"
+        android:visibility="gone"
+        tools:visibility="visible" />
 
 </LinearLayout>
