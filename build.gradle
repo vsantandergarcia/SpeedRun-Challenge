@@ -70,7 +70,9 @@ ext {
     espressoCoreVersion = '3.0.2'
     mockitoVersion = '2.13.0'
     mockwebServerVersion = '3.8.1'
+    espressoTestRules = '0.5'
     espressoIntents = '3.0.2'
+    espressoContrib = '2.2.2'
 }
 
 task clean(type: Delete) {

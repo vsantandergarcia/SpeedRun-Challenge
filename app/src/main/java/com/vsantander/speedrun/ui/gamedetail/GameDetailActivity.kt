@@ -11,12 +11,14 @@ import android.view.MenuItem
 import android.view.View
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.vsantander.speedrun.R
 import com.vsantander.speedrun.domain.model.Game
 import com.vsantander.speedrun.domain.model.Run
 import com.vsantander.speedrun.domain.model.Status
 import com.vsantander.speedrun.ui.base.activity.BaseActivity
 import com.vsantander.speedrun.extension.observe
+import com.vsantander.speedrun.utils.Constants
 import kotlinx.android.synthetic.main.activity_game_detail.*
 import kotlinx.android.synthetic.main.activity_game_detail_content.*
 import javax.inject.Inject
@@ -125,11 +127,13 @@ class GameDetailActivity : BaseActivity(), AppBarLayout.OnOffsetChangedListener 
         Glide
                 .with(this)
                 .load(game.image)
+                .transition(DrawableTransitionOptions.withCrossFade(Constants.DURATION_FADE_GLIDE))
                 .into(gameImageView)
 
         Glide
                 .with(this)
                 .load(game.logo)
+                .transition(DrawableTransitionOptions.withCrossFade(Constants.DURATION_FADE_GLIDE))
                 .into(logoImageView)
     }
 

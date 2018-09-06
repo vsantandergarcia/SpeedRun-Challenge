@@ -24,6 +24,7 @@ class AppModule {
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BASIC
         clientBuilder.addInterceptor(loggingInterceptor)
         clientBuilder.readTimeout(Constants.TIMEOUT_WS.toLong(), TimeUnit.SECONDS)
+        clientBuilder.connectTimeout(Constants.TIMEOUT_WS.toLong(), TimeUnit.SECONDS)
 
         return Retrofit.Builder()
                 .baseUrl(Constants.APP_BASE_URL)
