@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.support.design.widget.AppBarLayout
 import android.support.design.widget.Snackbar
 import android.view.MenuItem
 import android.view.View
@@ -21,7 +22,7 @@ import kotlinx.android.synthetic.main.activity_game_detail_content.*
 import javax.inject.Inject
 
 @BaseActivity.Animation(BaseActivity.PUSH)
-class GameDetailActivity : BaseActivity() {
+class GameDetailActivity : BaseActivity(), AppBarLayout.OnOffsetChangedListener  {
 
     companion object {
         const val EXTRA_GAME = "EXTRA_GAME"
@@ -47,6 +48,16 @@ class GameDetailActivity : BaseActivity() {
         } ?: throw RuntimeException("bad initialization. not found some extras")
     }
 
+    override fun onStart() {
+        super.onStart()
+        appbar.addOnOffsetChangedListener(this)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        appbar.removeOnOffsetChangedListener(this)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // handle item selection
         return when (item.itemId) {
@@ -55,6 +66,18 @@ class GameDetailActivity : BaseActivity() {
                 true
             }
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    /* AppBarLayout.OnOffsetChangedListener methods */
+
+    override fun onOffsetChanged(appBarLayout: AppBarLayout?, verticalOffset: Int) {
+        if (Math.abs(verticalOffset) == appBarLayout?.totalScrollRange) {
+            appbar.contentDescription = getString(R.string.img_collapsed)
+        } else if (verticalOffset == 0) {
+            appbar.contentDescription = getString(R.string.img_expanded)
+        } else {
+            appbar.contentDescription = getString(R.string.img_collapsing)
         }
     }
 
