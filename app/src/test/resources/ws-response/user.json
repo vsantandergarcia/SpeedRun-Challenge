@@ -1,0 +1,64 @@
+{"data": {
+    "id": "zxz9kn8q",
+    "names": {
+      "international": "Vincento",
+      "japanese": null
+    },
+    "weblink": "https://www.speedrun.com/user/Vincento",
+    "name-style": {
+      "style": "gradient",
+      "color-from": {
+        "light": "#7AB941",
+        "dark": "#8AC951"
+      },
+      "color-to": {
+        "light": "#7AB941",
+        "dark": "#8AC951"
+      }
+    },
+    "role": "user",
+    "signup": "2014-08-25T13:44:37Z",
+    "location": {
+      "country": {
+        "code": "au",
+        "names": {
+          "international": "Australia",
+          "japanese": null
+        }
+      },
+      "region": {
+        "code": "au/nsw",
+        "names": {
+          "international": "New South Wales, Australia",
+          "japanese": null
+        }
+      }
+    },
+    "twitch": {
+      "uri": "https://www.twitch.tv/vincento341"
+    },
+    "hitbox": null,
+    "youtube": {
+      "uri": "https://www.youtube.com/user/VincentoSpeedruns"
+    },
+    "twitter": {
+      "uri": "https://www.twitter.com/Vincento341"
+    },
+    "speedrunslive": {
+      "uri": "http://www.speedrunslive.com/profiles/#!/vincento341"
+    },
+    "links": [{
+      "rel": "self",
+      "uri": "https://www.speedrun.com/api/v1/users/zxz9kn8q"
+    }, {
+      "rel": "runs",
+      "uri": "https://www.speedrun.com/api/v1/runs?user=zxz9kn8q"
+    }, {
+      "rel": "games",
+      "uri": "https://www.speedrun.com/api/v1/games?moderator=zxz9kn8q"
+    }, {
+      "rel": "personal-bests",
+      "uri": "https://www.speedrun.com/api/v1/users/zxz9kn8q/personal-bests"
+    }]
+  }
+}

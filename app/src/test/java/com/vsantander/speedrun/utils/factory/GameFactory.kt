@@ -1,7 +1,7 @@
-package com.vsantander.speedrun.utils
+package com.vsantander.speedrun.utils.factory
 
 import com.vsantander.speedrun.domain.model.Game
-import com.vsantander.speedrun.utils.DataFactory.Factory.randomUuid
+import com.vsantander.speedrun.utils.factory.DataFactory.Factory.randomUuid
 
 /**
  * Factory class for Game related instances

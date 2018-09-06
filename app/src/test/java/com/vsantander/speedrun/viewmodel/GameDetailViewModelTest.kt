@@ -7,7 +7,7 @@ import com.vsantander.speedrun.domain.model.Run
 import com.vsantander.speedrun.domain.model.Status
 import com.vsantander.speedrun.domain.usecases.GetFirstRun
 import com.vsantander.speedrun.ui.gamedetail.GameDetailViewModel
-import com.vsantander.speedrun.utils.RunFactory
+import com.vsantander.speedrun.utils.factory.RunFactory
 import com.vsantander.speedrun.utils.RxImmediateSchedulerRule
 import io.reactivex.Single
 import org.junit.Before

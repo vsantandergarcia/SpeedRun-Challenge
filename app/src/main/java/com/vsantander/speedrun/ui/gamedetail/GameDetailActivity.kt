@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.view.MenuItem
 import android.view.View
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
@@ -44,6 +45,17 @@ class GameDetailActivity : BaseActivity() {
             setUpViews()
             setUpViewModels()
         } ?: throw RuntimeException("bad initialization. not found some extras")
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // handle item selection
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     /* setUp methods */

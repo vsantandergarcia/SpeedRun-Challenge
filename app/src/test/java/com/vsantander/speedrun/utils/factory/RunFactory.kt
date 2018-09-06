@@ -1,4 +1,4 @@
-package com.vsantander.speedrun.utils
+package com.vsantander.speedrun.utils.factory
 
 import com.vsantander.speedrun.domain.model.Run
 
@@ -19,7 +19,7 @@ class RunFactory {
 
         fun makeRunModel(): Run {
             return Run(id = DataFactory.randomUuid(),
-                    name = DataFactory.randomUuid(),
+                    name = null,
                     time = DataFactory.randomUuid(),
                     video = DataFactory.randomUuid(),
                     firstPlayerId = DataFactory.randomUuid())
